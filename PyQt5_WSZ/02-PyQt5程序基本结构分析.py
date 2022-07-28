@@ -7,12 +7,13 @@
 """
 __author__ = 'Sz'
 
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 # 0. 导入需要的包和模块
 from PyQt5.Qt import *  # 主要包含了我们常用的一些类, 汇总到了一块
 import sys
 
-
 # 1. 创建一个应用程序对象
+
 app = QApplication(sys.argv)
 # print(app.arguments())
 # print(qApp.arguments())
@@ -22,7 +23,8 @@ app = QApplication(sys.argv)
 # 创建控件,设置控件(大小,位置,样式...),事件,信号的处理
 # 2.1 创建控件
 # 当我们创建一个控件之后, 如果说,这个控件没有父控件, 则把它当做顶层控件(窗口)
-# 系统会自动的给窗口添加一些装饰(标题栏), 窗口控件具备一些特性(设置标题,图标)
+# 系统会自动的给窗口添加一些装饰(标题栏), 窗口控件具备一些特性(设置标题,图标)——缩放+缩小到任务栏+叉掉
+
 window = QWidget()
 # window = QPushButton()
 # window = QLabel()
@@ -31,30 +33,27 @@ window = QWidget()
 window.setWindowTitle("社会顺哥")
 window.resize(400, 400)
 
-
 # 控件也可以作为一个容器(承载其他的控件)
-label = QLabel(window)
+label = QLabel(window)  # 把 label插入到window控件里面
 label.setText("xxx")
 label.setWindowTitle("xxxxxxx")
 label.move(100, 50)
+
 # label.show()
-
-
+# 同时让label 和 window show出来，会有两个窗口。
 
 # 2.3 展示控件
 # 刚创建好一个控件之后,(这个控件没有什么父控件), 默认情况下不会被展示,只有手动的调用show()才可以
 # 如果说这个控件, 有父控件的,那么一般情况下, 父控件展示之后, 子控件会自动展示
 window.show()
 
-
-
 # 3. 应用程序的执行, 进入到消息循环
-# 让整个程序开始执行,并且进入到消息循环(无限循环)
+# 让整个程序开始执行,并且进入到消息循环(无限循环)————让窗口持续存在
 # 检测整个程序所接收到的用户的交互信息
-sys.exit(app.exec_())
+sys.exit(app.exec_())   # 没它窗口会秒闪
 
 
-# 我们的代码, 到时候的执行方式, 右击, 执行   2, 命令行 python 代码名称
+# 我们的代码, 到时候的执行方式:   1.右击, 执行   2.命令行 python 代码名称
 # 当别人通过命令行启动这个程序的时候,可以设定一种功能(接收命令行传递的参数, 来执行不同的业务逻辑
 # args = sys.argv
 # print(args)
@@ -62,7 +61,6 @@ sys.exit(app.exec_())
 #     print("xxx")
 # else:
 #     print("ooo")
-
-
+#
+#
 # sys.exit()
-

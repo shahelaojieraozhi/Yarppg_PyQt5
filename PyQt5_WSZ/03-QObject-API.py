@@ -1,4 +1,6 @@
-from PyQt5.Qt import *
+
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+
 
 class Window(QWidget):
     def __init__(self):
@@ -107,7 +109,7 @@ class Window(QWidget):
         obj2.setParent(obj1)
 
         # 监听obj2对象被释放
-        obj2.destroyed.connect(lambda : print("obj2对象被释放了"))
+        obj2.destroyed.connect(lambda: print("obj2对象被释放了"))
 
         del self.obj1
         # *************内存管理机制***************结束
@@ -155,7 +157,6 @@ class Window(QWidget):
         #
         # btn.clicked.connect(cao)
 
-
         # *************信号与槽案例***************结束
         pass
 
@@ -189,8 +190,6 @@ class Window(QWidget):
         btn.setText("点我")
         btn.move(200, 200)
 
-
-
         # for widget in self.findChildren(QLabel):
         for widget in self.children():
             # print(widget)
@@ -208,9 +207,9 @@ class Window(QWidget):
         obj3.setParent(obj2)
         obj2.setParent(obj1)
 
-        obj1.destroyed.connect(lambda : print("obj1被释放了"))
-        obj2.destroyed.connect(lambda : print("obj2被释放了"))
-        obj3.destroyed.connect(lambda : print("obj3被释放了"))
+        obj1.destroyed.connect(lambda: print("obj1被释放了"))
+        obj2.destroyed.connect(lambda: print("obj2被释放了"))
+        obj3.destroyed.connect(lambda: print("obj3被释放了"))
 
         # del obj2
         obj2.deleteLater()
@@ -260,7 +259,6 @@ def QWidget控件的父子关系():
         sub_widget.setStyleSheet("background-color: cyan;")
 
 
-
 def 信号与槽():
     # 连接窗口标题变化的信号  与  槽
     def cao(title):
@@ -279,9 +277,9 @@ def 信号与槽():
     # window.setWindowTitle("Hello Sz3")
 
 
-
 if __name__ == '__main__':
     import sys
+
     app = QApplication(sys.argv)
 
     # QWidget控件的父子关系()
@@ -289,6 +287,5 @@ if __name__ == '__main__':
     # window = QWidget()
 
     window.show()
-
 
     sys.exit(app.exec_())

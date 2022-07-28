@@ -7,7 +7,7 @@
 """
 __author__ = 'Sz'
 
-from PyQt5.Qt import *
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 import sys
 
 app = QApplication(sys.argv)
