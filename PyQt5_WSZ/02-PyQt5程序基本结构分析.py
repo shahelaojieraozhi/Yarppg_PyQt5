@@ -7,9 +7,8 @@
 """
 __author__ = 'Sz'
 
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 # 0. 导入需要的包和模块
-from PyQt5.Qt import *  # 主要包含了我们常用的一些类, 汇总到了一块
+from PyQt5.QtWidgets import *  # 主要包含了我们常用的一些类, 汇总到了一块
 import sys
 
 # 1. 创建一个应用程序对象
