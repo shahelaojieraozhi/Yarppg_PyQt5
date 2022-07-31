@@ -5,7 +5,3 @@
 # 阿达伟大dad
 
 
-# dad
-@# dawdsSDAWDDW
-
-ADAWD
