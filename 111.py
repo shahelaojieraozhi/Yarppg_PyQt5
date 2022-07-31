@@ -7,7 +7,3 @@
 
 # dwad dawd
 print('1')
-dad
-dawdaw
-ghjhjh
-dad
