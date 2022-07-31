@@ -6,9 +6,5 @@
 
 
 # dwad dawd
-dawdawdawdd
-
-dawdawddadadawdawdadad
-dadawdawdda
-
-dawdaw
+print('1')
+dad
