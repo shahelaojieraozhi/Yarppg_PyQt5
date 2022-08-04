@@ -2,4 +2,10 @@
 #
 # # 官方实例
 # pyqtgraph.examples.run()
-11111
+
+
+
+dawdadaw
+
+
+wada
